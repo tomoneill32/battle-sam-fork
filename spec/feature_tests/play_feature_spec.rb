@@ -11,3 +11,11 @@ feature "Playing the game" do
   end
 
 end
+
+feature "Attacking player 2" do
+  scenario "You attack player 2 and get confirmation" do
+    sign_in_and_play
+    click_on "Attack"
+    expect(page).to have_text "You attacked Sam. It's super effective"
+  end
+end
